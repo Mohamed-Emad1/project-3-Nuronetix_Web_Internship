@@ -1,0 +1,55 @@
+
+.landing-container .background-images{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.landing-container .background-images::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+.landing-container .background-images::before{
+    content: "Get Your Quote Now";
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+     top: 250px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); 
+    opacity: 1;
+    z-index: 1; 
+}
+.landing-container .background-images img{
+    max-width: 50%;
+    height: 100vh;
+}
+
+
+@media (max-width: 1200px) {
+    .landing-container .background-images img {
+        max-width: 70%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .landing-container .background-images img {
+        max-width: 100%; 
+        height: auto;    
+    }
+}
+
+@media (max-width: 576px) {
+    .landing-container .background-images {
+        flex-direction: column; 
+    }
+    .landing-container .background-images img {
+        max-width: 100%;
+        height: auto; 
+    }
+}
